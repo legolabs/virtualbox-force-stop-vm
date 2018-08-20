@@ -15,5 +15,5 @@ This script does this steps for you:
 
 Usage:
 ``` bash
-./force-stop.sh <vm_user> <vm_name>
+./force-stop-vm.sh <vm_user> <vm_name>
 ```
