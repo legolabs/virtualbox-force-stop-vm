@@ -24,7 +24,7 @@ fi
 # Check arguments
 if [ "$#" -ne 2 ]; then
   printf "Invalid number of arguments!\n\nUsage: $0 <vm_user> <vm_name>\n\n"
-  exit 3
+  exit 2
 fi
 
 
@@ -34,7 +34,7 @@ id -u $USER > /dev/null 2>&1
 if [ $? -eq 1 ]
 then
   printf "User $USER doesn't exists -> Quitting!\n\n"
-  exit 2
+  exit 3
 fi
 
 
