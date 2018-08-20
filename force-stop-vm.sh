@@ -1,7 +1,7 @@
 #!/bin/bash
 #title           :force-stop-vm.sh
 #description     :This script will force stop a Virtualbox VM
-#author          :andrea.gardoni@legolabs.it
+#author          :Andrea Gardoni @ Legolabs
 #date            :20180820
 #version         :0.1
 #usage           :bash force-stop-vm.sh <vm_user> <vm_name>
