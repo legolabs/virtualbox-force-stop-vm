@@ -23,7 +23,8 @@ fi
 
 # Check arguments
 if [ "$#" -ne 2 ]; then
-  printf "Invalid number of arguments!\n\nUsage: $0 <vm_user> <vm_name>\n\n"
+  printf "Invalid number of arguments!\n\n"
+  printf "Usage: $0 <vm_user> <vm_name>\n\n"
   exit 2
 fi
 
@@ -85,7 +86,7 @@ if [ $? -eq 0 ]
 then
   printf "Done\n\n"
 else
-  printf "Failed!\n\n-- Unable to stop process $PID! Try manually, if necessary --\n\n"
+  printf "Failed!\n\n-- Unable to kill process $PID! Try manually, if necessary --\n\n"
   exit 7
 fi
 
