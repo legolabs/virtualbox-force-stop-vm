@@ -1,6 +1,6 @@
 # virtualbox-force-stop-vm
 
-### Bash script to force stop a hung Virtualbox VM
+### Bash script to force stop a hung Virtualbox VM in Linux
 
 **Note**: you must be root to run the script
 
