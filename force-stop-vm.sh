@@ -52,22 +52,22 @@ else
 fi
 
 
-# Get VDI filename
-printf "Searching for first attached disk for %s... " "$VMNAME"
-VDI=`sudo -u $USER VBoxManage showvminfo "$VMNAME" | grep " (UUID: " | sed 's/.*): \(.*\) (UUID: .*/\1/;t;d' | head -n 1`
+# Get Log folder
+printf "Searching VM Log folder for %s... " "$VMNAME"
+LOG_FOLDER=`sudo -u $USER VBoxManage showvminfo "$VMNAME" | grep "Log folder:" | sed 's/.*Log folder:\(.*\).*/\1/;t;d' | head -n 1 | sed -e 's/^[ \t]*//'`"/VBox.log"
 
-if [ -z "$VDI" ]
+if [ -z "$LOG_FOLDER" ]
 then
   printf "Not found! Quitting!\n\n"
   exit 5
 else
-  printf "Found $VDI\n"
+  printf "Found $LOG_FOLDER\n"
 fi
 
 
-# Get PID of Virtualbox VM which is using VDI
-printf "Searching for process using disk... "
-PID=`lsof -t "$VDI" | head -n 1`
+# Get PID of Virtualbox VM which is using Log folder
+printf "Searching for process using log folder... "
+PID=`lsof -t "$LOG_FOLDER" | head -n 1`
 
 if [ -z "$PID" ]
 then
