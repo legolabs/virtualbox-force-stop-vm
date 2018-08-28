@@ -1,6 +1,5 @@
 # virtualbox-toolbox
-
-### Toolbox to automate some boring tasks in Linux Virtualbox environment
+This container provides some tool to automate boring tasks in Linux Virtualbox environment
 
 
 ## force-stop-vm.sh
