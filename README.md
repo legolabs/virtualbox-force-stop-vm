@@ -22,7 +22,7 @@ Usage:
 ```
 
 ## backup-vm.sh
-### Bash script to take modification-only backups of one VM via rsync
+### Bash script to take fast modification-only backups via rsync
 
 One of the easiest way to take a safe full backup of a VM is to take it down and make a full copy of its folder.
 
