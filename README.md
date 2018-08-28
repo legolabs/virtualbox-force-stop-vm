@@ -33,7 +33,17 @@ This script does this steps for you:
 * Rsync the VM folder to a specified destination (also remote, if pubkey correctly configured on both sides)
 * Starts VM (if it was previously running)
 
-Usage:
+Usage
 ``` bash
 ./backup-vm.sh <vm_name> <destination_folder>
+```
+
+Example (local destination):
+``` bash
+./backup-vm.sh WindowsXP /media/ext_usb/vm_backups
+```
+
+Example (remote destination with pubkey):
+``` bash
+./backup-vm.sh WindowsXP agardoni@192.168.1.100:/home/agardoni/vm_backups
 ```
