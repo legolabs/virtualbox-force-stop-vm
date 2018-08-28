@@ -1,9 +1,9 @@
 # virtualbox-toolbox
-This container provides some tool to automate boring tasks in Linux Virtualbox environment
+This container provides some tool to automate boring tasks in Linux VirtualBox environment
 
 
 ## force-stop-vm.sh
-### Bash script to force stop a hung Virtualbox VM in Linux
+### Bash script to force stop a hung VirtualBox VM in Linux
 
 **Note**: you must be root to run the script
 
