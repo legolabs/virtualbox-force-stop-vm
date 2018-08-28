@@ -20,3 +20,20 @@ Usage:
 ``` bash
 ./force-stop-vm.sh <vm_user> <vm_name>
 ```
+
+## backup-vm.sh
+### Bash script to take modification-only backups of one VM via rsync
+
+One of the easiest way to take a safe full backup of a VM is to take it down and make a full copy of its folder.
+
+This script does this steps for you:
+
+* Finds the VM folder
+* Puts VM in savestate (if it is running)
+* Rsync the folder with a specified destination folder (also remote, if pubkey correctly configured on both sides)
+* Starts VM (if it was previously running)
+
+Usage:
+``` bash
+./backup-vm.sh <vm_name> <destination_folder>
+```
