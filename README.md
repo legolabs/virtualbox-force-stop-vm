@@ -30,7 +30,7 @@ This script does this steps for you:
 
 * Finds the VM folder
 * Puts VM in savestate (if it is running)
-* Rsync the folder with a specified destination folder (also remote, if pubkey correctly configured on both sides)
+* Rsync the VM folder to a specified destination (also remote, if pubkey correctly configured on both sides)
 * Starts VM (if it was previously running)
 
 Usage:
