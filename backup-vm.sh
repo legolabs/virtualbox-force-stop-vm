@@ -61,7 +61,7 @@ then
   printf "Not running.\n"
 else
   printf "Running.\n"
-  printf "Try stopping VM... "
+  printf "Trying to stop VM... "
   vboxmanage controlvm "$VM_NAME" savestate
 
   if [ $? -eq 0 ]
