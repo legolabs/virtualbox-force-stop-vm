@@ -1,4 +1,11 @@
 #!/bin/bash
+#title           :backup-vm.sh
+#description     :This script will backup a Virtualbox VM
+#author          :Andrea Gardoni @ Legolabs
+#date            :20180828
+#version         :0.1
+#usage           :bash backup-vm.sh <vm_name> <destination_path>
+#==============================================================================
 
 printf "\n"
 
