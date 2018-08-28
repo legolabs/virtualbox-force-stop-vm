@@ -24,7 +24,7 @@ Usage:
 ## backup-vm.sh
 ### Bash script to take fast modification-only backups via rsync
 
-One of the easiest way to take a safe full backup of a VM is to turn it down and make a full copy of its folder.
+One of the easiest way to take a safe full backup of a VM is to turn it down and make a full copy of its folder. This process is quite slow and, if the destination is a remote server, highly bandwith-hungry. Using rsync with inplace modification option activated reduces disk writes and data transfer (although it is equally CPU wiping).
 
 This script does this steps for you:
 
