@@ -84,19 +84,26 @@ if [ $? -eq 0 ]
 then
   printf "Done\n"
 else
-  printf "Failed! Check backup consistency ASAP!\n\n"
+  printf "Failed! Check backup consistency ASAP!\n"
   exit 6
 fi
 
 
-# Start VM
-printf "Starting VM... "
-vboxmanage startvm "$VM_NAME" --type headless
-
-if [ $? -eq 0 ]
+# Start VM, if it was previously running
+if [ -z "$VM_RUNNING" ]
 then
-  printf "Done\n\n"
+  printf "Not starting VM, it was not previously running\n"
 else
-  printf "Failed! Check VM state ASAP!\n\n"
-  exit 7
+  printf "Starting VM... "
+  vboxmanage startvm "$VM_NAME" --type headless
+
+  if [ $? -eq 0 ]
+  then
+    printf "Done\n"
+  else
+    printf "Failed! Check VM state ASAP!\n"
+    exit 7
+  fi
 fi
+
+printf "\nBackup complete!\n\n"
