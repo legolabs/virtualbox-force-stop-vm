@@ -116,9 +116,9 @@ printf "\nBackup complete!\n\n"
 
 
 # Calculate and display duration
-duration=$SECONDS
+DURATION=$SECONDS
 
 printf "\nBackup complete!\n"
-printf "Operation took %02d:%02d\n\n" $(($duration / 60)) $(($duration % 60))
+printf "Operation took %02d:%02d\n\n" $(($DURATION / 60)) $(($DURATION % 60))
 
 exit 0
