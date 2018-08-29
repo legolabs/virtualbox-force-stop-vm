@@ -113,3 +113,10 @@ else
 fi
 
 printf "\nBackup complete!\n\n"
+
+
+# Calculate and display duration
+duration=$SECONDS
+
+printf "\nBackup complete!\n"
+printf "Operation took $(($duration / 60))' $(($duration % 60))\"\n\n"
