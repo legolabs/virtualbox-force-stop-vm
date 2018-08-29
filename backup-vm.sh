@@ -119,4 +119,4 @@ printf "\nBackup complete!\n\n"
 duration=$SECONDS
 
 printf "\nBackup complete!\n"
-printf "Operation took $(($duration / 60))' $(($duration % 60))\"\n\n"
+printf "Operation took %02d:%02d\n\n" $(($duration / 60)) $(($duration % 60))
