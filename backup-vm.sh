@@ -92,7 +92,6 @@ then
   printf "Done\n"
 else
   printf "Failed! Check backup consistency ASAP!\n"
-  exit 6
 fi
 
 
@@ -109,7 +108,7 @@ else
     printf "Done\n"
   else
     printf "Failed! Check VM state ASAP!\n"
-    exit 7
+    exit 6
   fi
 fi
 
