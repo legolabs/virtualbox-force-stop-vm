@@ -85,7 +85,7 @@ fi
 # --delete is needed in order to remove old .sav file
 printf "Starting sync with destination... "
 
-rsync -a --inplace --delete "$VM_FOLDER" "$DEST_PATH"
+rsync -as --inplace --delete "$VM_FOLDER" "$DEST_PATH"
 
 if [ $? -eq 0 ]
 then
